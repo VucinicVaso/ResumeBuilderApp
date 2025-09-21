@@ -1,4 +1,4 @@
-package app.vucinicvaso.resumebuilderapp.core.uifactory.type
+package app.vucinicvaso.resumebuilderapp.core.wtoolbox.uifactory.type
 
 class WTUIComponentType {
 
