@@ -7,14 +7,16 @@ import app.vucinicvaso.resumebuilderapp.core.wtoolbox.uifactory.factory.impl.WTU
 abstract class WTView<VM>(viewModel: VM?) : ComponentActivity() {
 
     init {
+        setViewModel(viewModel);
         setUiFactory();
     }
 
-    var viewModel : VM? = viewModel;
+    private var viewModel : VM? = null;
+    private fun setViewModel(vM : VM?) { viewModel = vM; }
+    fun getViewModel() : VM? { return viewModel; }
 
-    var uiFactory : WTUIFactory? = null;
-    fun setUiFactory() {
-        uiFactory = WTUIFactoryImpl.instance;
-    }
+    private var uiFactory : WTUIFactory? = null;
+    private fun setUiFactory() { uiFactory = WTUIFactoryImpl.instance; }
+    fun getUiFactory() : WTUIFactory? { return uiFactory; }
 
 }
